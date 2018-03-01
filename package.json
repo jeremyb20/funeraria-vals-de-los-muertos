@@ -1,0 +1,19 @@
+{
+  "name": "funeraria-vals-de-los-muertos",
+  "version": "1.0.0",
+  "description": "La funeraria “El vals de los muertos” ha abierto recientemente sus puertas y desea contratar a su equipo de desarrollo para que les realice un sistema que les permita automatizar sus servicios.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremyb20/funeraria-vals-de-los-muertos.git"
+  },
+  "author": "Jeremy-barquero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeremyb20/funeraria-vals-de-los-muertos/issues"
+  },
+  "homepage": "https://github.com/jeremyb20/funeraria-vals-de-los-muertos#readme"
+}
