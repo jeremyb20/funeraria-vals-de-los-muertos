@@ -1,12 +1,16 @@
 angular.module('funeraria', ['duScroll']).
-  controller('MyCtrl', function($scope){
-    var container = angular.element(document.getElementById('container'));
-    var section2 = angular.element(document.getElementById('section-2'));
+  controller('MyCtrl', function ($scope, $document){
     $scope.toTheTop = function() {
-      container.scrollTop(0, 5000);
+      $document.scrollTopAnimated(0, 5000).then(function() {
+        console && console.log('You just scrolled to the top!');
+      });
     }
-    $scope.toSection2 = function() {
-      container.scrollTo(section2, 0, 1000);
+    var section3 = angular.element(document.getElementById('section-3'));
+    $scope.toSection3 = function() {
+      $document.scrollToElementAnimated(section3);
+    
     }
+
+    
   }
-);
+).value('duScrollOffset', 30);

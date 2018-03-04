@@ -33,54 +33,57 @@
 		  controllerAs: 'vm'
     })
 
-    // .state('users', {
-    //   // Se le crea un url (por el cual se va a accesar a el medio de la ruta en el navegador)
-    //   url: '/users',
-    //   // Se convoca al html
-    //   templateUrl: './components/usuarios/usuarios.view.html',
-    //   // se convoca el controlador
-    //   resolve: {
-    //     load: ['$ocLazyLoad', ($ocLazyLoad) => {
-    //       return $ocLazyLoad.load('./components/usuarios/usuarios.controller.js')
-    //     }]
-    //   },
-    //   // se convica el css
-    //   css: './components/usuarios/usuarios.styles.css',
-    //   controller: 'controladorUsuarios',
-		//   controllerAs: 'vm'
-    // })
+    .state('signup', {
+      url: '/signup',
+      templateUrl: './components/signup/signup.view.html',
+      resolve: {
+        load: ['$ocLazyLoad', ($ocLazyLoad) => {
+          return $ocLazyLoad.load('./components/signup/signup.controller.js')
+        }]
+      },
+      // params:{
+      //   objUsuarioTemp: ''
+      // },
+      css: './components/signup/signup.style.css',
+      controller: 'controladorRegistro',
+		  controllerAs: 'vm'
+    })
 
-    // .state('cars', {
-    //   url: '/cars',
-    //   templateUrl: './components/automoviles/autos.view.html',
-    //   resolve: {
-    //     load: ['$ocLazyLoad', ($ocLazyLoad) => {
-    //       return $ocLazyLoad.load('./components/automoviles/autos.controller.js')
-    //     }]
-    //   },
-    //   params:{
-    //     objUsuarioTemp: ''
-    //   },
-    //   css: './components/automoviles/autos.style.css',
-    //   controller: 'controladorVehiculos',
-		//   controllerAs: 'vm'
-    // })
+    .state('logIn', {
+      // Se le crea un url (por el cual se va a accesar a el medio de la ruta en el navegador)
+      url: '/logIn',
+      // Se convoca al html
+      templateUrl: './components/logIn/login.view.html',
+      // se convoca el controlador
+      resolve: {
+        load: ['$ocLazyLoad', ($ocLazyLoad) => {
+          return $ocLazyLoad.load('./components/logIn/logIn.controller.js')
+        }]
+      },
+      params:{
+        objUsuarioTemp: ''
+      },
+      // se convica el css
+      css: './components/logIn/logIn.style.css',
+      controller: 'controladorInicioSesion',
+		  controllerAs: 'vm'
+    })
 
-    // .state('works', {
-    //   url: '/works',
-    //   templateUrl: './components/tareas/tarea.view.html',
-    //   resolve: {
-    //     load: ['$ocLazyLoad', ($ocLazyLoad) => {
-    //       return $ocLazyLoad.load('./components/tareas/tarea.controller.js')
-    //     }]
-    //   },
-    //   params: {
-    //     objVehiculoTemp: ''
-    //   },
-    //   css: './components/tareas/tarea.style.css',
-    //   controller: 'controladorReparaciones',
-		//   controllerAs: 'vm'
-    // })
+    .state('profile', {
+      url: '/profile',
+      templateUrl: './components/profile/profile.view.html',
+      resolve: {
+        load: ['$ocLazyLoad', ($ocLazyLoad) => {
+          return $ocLazyLoad.load('./components/profile/profile.controller.js')
+        }]
+      },
+      // params: {
+      //   objUsuarioTemp: ''
+      // },
+      css: './components/profile/profile.style.css',
+      controller: 'controladorProfile',
+		  controllerAs: 'vm'
+    })
 
     $urlRouterProvider.otherwise('/');// cargar por defecto el landing page
   }
